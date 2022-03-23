@@ -216,7 +216,7 @@ function buildDonationElement(streamer)
 
     let element = '';
     if(saweriaElement !== '' || socialbuzzElement !== ''){
-        element = `<div class="text-gray-900 font-bold uppercase mt-6">Streaming Platform</div>` + saweriaElement + socialbuzzElement;
+        element = `<div class="text-gray-900 font-bold uppercase mt-6">Donation</div>` + saweriaElement + socialbuzzElement;
     }
 
     return element;
