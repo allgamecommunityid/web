@@ -208,15 +208,15 @@ function buildDonationElement(streamer)
         saweriaElement = `<div class="text-gray-600">Saweria : <a class="text-yellow-500" href="${saweria}">Donate Now</a></div>`;
     }
 
-    const socialbuzz = streamer?.socialbuzz;
-    let socialbuzzElement = '';
+    const sociabuzz = streamer?.sociabuzz;
+    let sociabuzzElement = '';
     if(socialbuzz) {
-        socialbuzzElement = `<div class="text-gray-600">socialbuzz : <a class="text-yellow-500" href="${socialbuzz}">Donate Now</a></div>`;
+        sociabuzzElement = `<div class="text-gray-600">SociaBuzz : <a class="text-yellow-500" href="${sociabuzz}">Donate Now</a></div>`;
     }
 
     let element = '';
-    if(saweriaElement !== '' || socialbuzzElement !== ''){
-        element = `<div class="text-gray-900 font-bold uppercase mt-6">Donation</div>` + saweriaElement + socialbuzzElement;
+    if(saweriaElement !== '' || sociabuzzElement !== ''){
+        element = `<div class="text-gray-900 font-bold uppercase mt-6">Donation</div>` + saweriaElement + sociabuzzElement;
     }
 
     return element;
