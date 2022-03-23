@@ -2,7 +2,7 @@
 function init()
 {
     console.log("WHY U HERE ?");
-    const url = 'https://script.google.com/macros/s/AKfycbzyyvY4AYH9ixOLTSMeB1yfm8vyl5G2Y3YQL4YOsYIXNF6iZigPWWq5-DMVERPQxCnNfg/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbwSwjOkOukZsPNJZf-HrFVKYtOb6_IJwW0MwanwzjEVDPxc1f_XZiEOFuvKWxjovQuOlA/exec';
     
     fetch(url)
     .then(res => res.json())
@@ -58,7 +58,7 @@ function init()
 
                 const staffElement = document.getElementById("staff");
                 staffElement.innerHTML += `
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 intro-y">
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 w-full intro-y">
                         <div class="p-6 flex rounded-md bg-white zoom-in justify-center items-center">
                             <div class="text-gray-900 font-bold text-lg"> ${name}</div>
                         </div>
@@ -68,6 +68,29 @@ function init()
         }else {
             const staffWrapperElement = document.getElementById("staffwrapper");
             staffWrapperElement.remove();
+        }
+
+        const friends = res[0]?.data?.friend;
+        if(friends && friends.length > 0) {
+            friends.forEach(friend => {
+                const name = friend?.name;
+
+                if(!name) {
+                    return;
+                }
+
+                const friendElement = document.getElementById("friend");
+                friendElement.innerHTML += `
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 w-full intro-y">
+                        <div class="p-6 flex rounded-md bg-white zoom-in justify-center items-center">
+                            <div class="text-gray-900 font-bold text-lg"> ${name}</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }else {
+            const friendWrapperElement = document.getElementById("friendwrapper");
+            friendWrapperElement.remove();
         }
 
         const members = res[0]?.data?.member;
