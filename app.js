@@ -92,6 +92,31 @@ function init()
             const memberWrapperElement = document.getElementById("memberwrapper");
             memberWrapperElement.remove();
         }
+
+        const plays = res[0]?.data?.play;
+        if(plays && plays.length > 0) {
+            plays.forEach(play => {
+                const name = play?.name;
+                const detail = play?.detail;
+
+                if(!name) {
+                    return;
+                }
+
+                const playElement = document.getElementById("play");
+                playElement.innerHTML += `
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 intro-y">
+                        <div class="p-6 flex rounded-md bg-white zoom-in justify-center items-center">
+                            <div class="text-gray-900 font-bold text-lg"> ${name}</div>
+                            <div class="text-gray-900"> ${detail}</div>
+                        </div>
+                    </div>
+                `;
+            });
+        }else {
+            const playWrapperElement = document.getElementById("playwrapper");
+            playWrapperElement.remove();
+        }
     })
     .then(res => {
         const element = document.getElementById("loading");
@@ -155,17 +180,15 @@ function buildSocialMediaElement(streamer)
 function buildDonationElement(streamer)
 {
     const saweria = streamer?.saweria;
-    const saweriaurl = streamer?.saweriaurl;
     let saweriaElement = '';
-    if(saweria && saweriaurl) {
-        saweriaElement = `<div class="text-gray-600">Saweria : <a href="${saweriaurl}">Donasi Sekarang</a></div>`;
+    if(saweria) {
+        saweriaElement = `<div class="text-gray-600">Saweria : <a href="${saweria}">Donate Now</a></div>`;
     }
 
     const socialbuzz = streamer?.socialbuzz;
-    const socialbuzzurl = streamer?.socialbuzzurl;
     let socialbuzzElement = '';
-    if(socialbuzz && socialbuzzurl) {
-        socialbuzzElement = `<div class="text-gray-600">socialbuzz : <a href="${socialbuzzurl}">Donasi Sekarang</a></div>`;
+    if(socialbuzz) {
+        socialbuzzElement = `<div class="text-gray-600">socialbuzz : <a href="${socialbuzz}">Donate Now</a></div>`;
     }
 
     let element = '';
