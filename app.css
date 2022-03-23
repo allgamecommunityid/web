@@ -1,0 +1,16 @@
+
+html, body {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100%;
+    width: 100%;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+.justify-items-center {
+    justify-items: center;
+}
