@@ -210,7 +210,7 @@ function buildDonationElement(streamer)
 
     const sociabuzz = streamer?.sociabuzz;
     let sociabuzzElement = '';
-    if(socialbuzz) {
+    if(sociabuzz) {
         sociabuzzElement = `<div class="text-gray-600">SociaBuzz : <a class="text-yellow-500" href="${sociabuzz}">Donate Now</a></div>`;
     }
 
