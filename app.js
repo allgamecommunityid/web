@@ -81,7 +81,7 @@ function init()
 
                 const memberElement = document.getElementById("member");
                 memberElement.innerHTML += `
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 intro-y">
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 w-full intro-y">
                         <div class="p-6 flex rounded-md bg-white zoom-in justify-center items-center">
                             <div class="text-gray-900 font-bold text-lg"> ${name}</div>
                         </div>
