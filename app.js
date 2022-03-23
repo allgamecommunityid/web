@@ -26,7 +26,7 @@ function init()
 
                 const streamerElement = document.getElementById("streamer");
                 streamerElement.innerHTML += `
-                    <div class="col-span-12 sm:col-span-12 xl:col-span-12 xl:w-1/2 intro-y">
+                    <div class="col-span-12 sm:col-span-12 xl:col-span-12 w-full xl:w-1/2 intro-y">
                         <div class="p-6 flex rounded-md bg-white zoom-in">
                             <div class="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden mr-4 md:mr-6 flex-shrink-0">
                                 <img src="${imageurl !== '' ? imageurl : 'noavatar.png'}" alt="profile image" class="w-full h-full object-cover">
