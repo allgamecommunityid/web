@@ -2,7 +2,7 @@
 function init()
 {
     console.log("WHY U HERE ?");
-    const url = 'https://script.google.com/macros/s/AKfycbz_KdY_CGzyufIaA_q2YNPxC2yK21_V7sOGlcYBVWPTwi1zMdwIXw3ctpR4hQogkk2YWQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbzyyvY4AYH9ixOLTSMeB1yfm8vyl5G2Y3YQL4YOsYIXNF6iZigPWWq5-DMVERPQxCnNfg/exec';
     
     fetch(url)
     .then(res => res.json())
@@ -105,8 +105,8 @@ function init()
 
                 const playElement = document.getElementById("play");
                 playElement.innerHTML += `
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 intro-y">
-                        <div class="p-6 flex rounded-md bg-white zoom-in justify-center items-center">
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 w-full intro-y">
+                        <div class="p-6 rounded-md bg-white zoom-in">
                             <div class="text-gray-900 font-bold text-lg"> ${name}</div>
                             <div class="text-gray-900"> ${detail}</div>
                         </div>
