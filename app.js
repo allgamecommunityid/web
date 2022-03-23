@@ -142,14 +142,14 @@ function buildStreamingElement(streamer)
     const youtubeurl = streamer?.youtubeurl;
     let youtubeElement = '';
     if(youtube && youtubeurl) {
-        youtubeElement = `<div class="text-gray-600">Youtube : <a href="${youtubeurl}">${youtube}</a></div>`;
+        youtubeElement = `<div class="text-gray-600">Youtube : <a  class="text-yellow-500" href="${youtubeurl}">${youtube}</a></div>`;
     }
 
     const gox = streamer?.gox;
     const goxurl = streamer?.goxurl;
     let goxElement = '';
     if(gox && goxurl) {
-        goxElement = `<div class="text-gray-600">gox : <a href="${goxurl}">${gox}</a></div>`;
+        goxElement = `<div class="text-gray-600">Gox : <a class="text-yellow-500" href="${goxurl}">${gox}</a></div>`;
     }
 
     let element = '';
@@ -166,7 +166,7 @@ function buildSocialMediaElement(streamer)
     const instagramurl = streamer?.instagramurl;
     let instagramElement = '';
     if(instagram && instagramurl) {
-        instagramElement = `<div class="text-gray-600">Instagram : <a href="${instagramurl}">${instagram}</a></div>`;
+        instagramElement = `<div class="text-gray-600">Instagram : <a class="text-yellow-500" href="${instagramurl}">${instagram}</a></div>`;
     }
 
     let element = '';
@@ -182,13 +182,13 @@ function buildDonationElement(streamer)
     const saweria = streamer?.saweria;
     let saweriaElement = '';
     if(saweria) {
-        saweriaElement = `<div class="text-gray-600">Saweria : <a href="${saweria}">Donate Now</a></div>`;
+        saweriaElement = `<div class="text-gray-600">Saweria : <a class="text-yellow-500" href="${saweria}">Donate Now</a></div>`;
     }
 
     const socialbuzz = streamer?.socialbuzz;
     let socialbuzzElement = '';
     if(socialbuzz) {
-        socialbuzzElement = `<div class="text-gray-600">socialbuzz : <a href="${socialbuzz}">Donate Now</a></div>`;
+        socialbuzzElement = `<div class="text-gray-600">socialbuzz : <a class="text-yellow-500" href="${socialbuzz}">Donate Now</a></div>`;
     }
 
     let element = '';
