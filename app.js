@@ -130,8 +130,8 @@ function init()
                 playElement.innerHTML += `
                     <div class="col-span-12 sm:col-span-6 xl:col-span-4 w-full intro-y">
                         <div class="p-6 rounded-md bg-white zoom-in">
-                            <div class="text-gray-900 font-bold text-lg"> ${name}</div>
-                            <div class="text-gray-900"> ${detail}</div>
+                            <div class="text-gray-900 font-bold text-lg text-center"> ${name}</div>
+                            <div class="text-gray-900 text-center"> ${detail}</div>
                         </div>
                     </div>
                 `;
