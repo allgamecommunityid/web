@@ -2,7 +2,7 @@
 function init()
 {
     console.log("WHY U HERE ?");
-    const url = 'https://script.google.com/macros/s/AKfycbz7iDrmb2Pmg-MiOhHJd7agYVCIlD11UBe8qnLoSTKspQDSzbNWporu07d2NxmSSpM6qg/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbxzZzB4DsV_tqMXnqUdyw15uByfmej_uOjEyqMMZt6oPOWMN3krcP7aok9_AD8d1go99g/exec';
     
     fetch(url)
     .then(res => res.json())
