@@ -79,11 +79,21 @@ function init()
                     return;
                 }
 
+                const quote = friend?.quote;
+                let quoteElement = '';
+                if(quote) {
+                    quoteElement = `<p class="text-gray-600">"${quote}"</p>`;
+                }
+
                 const friendElement = document.getElementById("friend");
                 friendElement.innerHTML += `
-                    <div class="col-span-12 sm:col-span-6 xl:col-span-3 w-full intro-y">
-                        <div class="p-6 flex rounded-md bg-white zoom-in justify-center items-center">
-                            <div class="text-gray-900 font-bold text-lg"> ${name}</div>
+                    <div class="col-span-12 sm:col-span-6 xl:col-span-4 w-full intro-y">
+                        <div class="p-6 rounded-md bg-white zoom-in">
+                            <div class="text-gray-900 font-bold uppercase text-lg"> ${name}</div>
+                            ${quoteElement}
+                            ${buildStreamingElement(friend)}
+                            ${buildSocialMediaElement(friend)}
+                            ${buildDonationElement(friend)}
                         </div>
                     </div>
                 `;
