@@ -10,12 +10,14 @@ function init()
         const datas = res[0]?.data?.privacypolicy;
         if(datas && datas.length > 0) {
             datas.forEach(datas => {
-                const text = datas?.text;
+                let text = datas?.text;
 
                 if(!text) {
                     return;
                 }
                 const privacyElement = document.getElementById("privacy-content");
+
+                text = text.replace(/\n\s*\n/g, '<br>');
                 privacyElement.innerHTML += `${text}`;
 
                 const date = datas?.date;
